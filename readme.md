@@ -10,6 +10,8 @@ This application integrates with the Keboola Management API to provide organizat
 - Download user-project mappings as CSV
 - Maintain an audit log of all actions performed
 
+![Screenshot](img/screenshot.png)
+
 The app is designed to work both as a standalone Streamlit application and as a data application within the Keboola platform.
 
 ## Key Features
