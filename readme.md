@@ -10,9 +10,17 @@ This application integrates with the Keboola Management API to provide organizat
 - Download user-project mappings as CSV
 - Maintain an audit log of all actions performed
 
-![Screenshot](img/screenshot.png)
-
 The app is designed to work both as a standalone Streamlit application and as a data application within the Keboola platform.
+
+## User Interface
+
+### Main Dashboard
+![User-Project Mapping Table](img/screenshot_table.png)
+*The main dashboard displays a comprehensive table of all users and their project assignments. Users can download this data as CSV for further analysis.*
+
+### User Access Management
+![User Access Removal Interface](img/screenshot_removal.png)
+*The user management interface allows administrators to select specific users and remove their access from selected projects. All actions are logged in the audit trail.*
 
 ## Key Features
 
@@ -108,15 +116,20 @@ If secrets are not configured, the application will prompt for manual input via 
 
 ### 2. Loading Data
 1. Click "Load Users" to fetch all projects and users from your organization
-2. The app will display a summary of loaded data
-3. Use the download button to export the complete user-project mapping
+2. The app will display a summary of loaded data and populate the main table (as shown in the dashboard screenshot above)
+3. Use the download button to export the complete user-project mapping as CSV
 
 ### 3. Managing User Access
-1. Select a user from the email dropdown
-2. Review their current project assignments
-3. Select projects to remove the user from
-4. Click "Remove Selected Access" to execute the changes
-5. Review the audit log for confirmation
+1. Select a user from the email dropdown in the user management section
+2. Review their current project assignments displayed in the interface
+3. Select projects to remove the user from using the multi-select dropdown
+4. Click "Remove Selected Access" to execute the changes (as demonstrated in the user access management screenshot)
+5. Review the audit log for confirmation of all actions performed
+
+### 4. Data Export and Audit
+- **CSV Export**: Download the complete user-project mapping for external analysis
+- **Audit Trail**: Monitor all user removal actions with timestamps and API call details
+- **Session Persistence**: Data remains loaded throughout your session for multiple operations
 
 ## Technical Details
 
